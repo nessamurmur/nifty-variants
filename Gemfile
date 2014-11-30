@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in nifty-variants.gemspec
+gem 'generative', git: 'git@github.com:justincampbell/generative.git'
 gemspec
