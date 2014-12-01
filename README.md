@@ -2,6 +2,8 @@
 
 [ ![Codeship Status for niftyn8/nifty-variants](https://codeship.com/projects/9585a190-5b48-0132-5f60-022e5ac315ca/status)](https://codeship.com/projects/50484)
 
+[![Gem Version](https://badge.fury.io/rb/nifty-variants.svg)](http://badge.fury.io/rb/nifty-variants)
+
 If you are familiar with variants from a nice language like Haskell try this.
 
 If you don't know what variants are [start here](http://youtu.be/ZQkIWWTygio)
