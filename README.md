@@ -2,7 +2,7 @@
 
 If you are familiar with variants from a nice language like Haskell try this.
 
-If you don't know what variants are [start here](http://youtu.be/ZQkIWWTygio)
+If you don't know what variants are [start here](http://youtu.be/ZQkIWWTygio)B1;2802;0c
 
 **NOTE** Nifty::Variants makes use of Refinements which weren't introduced until
 Ruby 2.1 and as a result no Ruby below 2.1 is supported. You're welcome to write
@@ -32,7 +32,7 @@ class OrderDispatch
   def shipit!(order)
     cases order,
       digital: ->(o) { o.email! },
-      delivery: ->(o) { o.deliver! }
+      delivery: ->(o) { o.deliver! },
       else: ->(o) { move_to_error_queue(o) }
   end
 end
