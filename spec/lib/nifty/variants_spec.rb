@@ -15,20 +15,18 @@ RSpec.describe Nifty::Variants do
       end
 
       it "can take advantage of an else" do
-        v = variant
         expect(
-          cases v,
-            else: ->(_) { v.first }
-        ).to eq v.first
+          cases variant,
+            else: ->(_) { variant.first }
+        ).to eq variant.first
       end
 
       it "selects the correct variant match" do
-        v = variant
         expect(
-          cases v,
+          cases variant,
             generate(:key) => ->(*_) { false },
             generate(:key) => ->(*_) { false },
-            v.first => ->(*_) { true }
+            variant.first => ->(*_) { true }
         ).to be true
       end
     end
