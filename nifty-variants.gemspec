@@ -6,6 +6,7 @@ require 'nifty/variants/version'
 Gem::Specification.new do |spec|
   spec.name          = "nifty-variants"
   spec.version       = Nifty::Variants::VERSION
+  spec.required_ruby_version = '~> 2.1.0'
   spec.authors       = ["Nate West"]
   spec.email         = ["natescott.west@gmail.com"]
   spec.summary       = %q{Variants in Ruby}
