@@ -1,6 +1,12 @@
 # Nifty::Variants
 
-TODO: Write a gem description
+If you are familiar with variants from a nice language like Haskell try this.
+
+If you don't know what variants are [start here](http://youtu.be/ZQkIWWTygio)
+
+**NOTE** Nifty::Variants makes use of Refinements which weren't introduced until
+Ruby 2.1 and as a result no Ruby below 2.1 is supported. You're welcome to write
+a fancy shim, but I don't recommend it.
 
 ## Installation
 
@@ -12,15 +18,25 @@ gem 'nifty-variants'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install nifty-variants
+    $ bundle install -j2
 
 ## Usage
 
-TODO: Write usage instructions here
+`nifty-variants` makes use of Refinements which were introduced in Ruby 2.1.
+In order to use it in your class or module simply use it.
+
+```ruby
+class OrderDispatch
+  using Nifty::Variants
+
+  def shipit!(order)
+    cases order,
+      digital: ->(o) { o.email! },
+      delivery: ->(o) { o.deliver! }
+      else: ->(o) { move_to_error_queue(o) }
+  end
+end
+```
 
 ## Contributing
 
