@@ -1,5 +1,7 @@
 # Nifty::Variants
 
+[ ![Codeship Status for niftyn8/nifty-variants](https://codeship.com/projects/9585a190-5b48-0132-5f60-022e5ac315ca/status)](https://codeship.com/projects/50484)
+
 If you are familiar with variants from a nice language like Haskell try this.
 
 If you don't know what variants are [start here](http://youtu.be/ZQkIWWTygio)B1;2802;0c
