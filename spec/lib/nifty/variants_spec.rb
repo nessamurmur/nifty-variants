@@ -56,8 +56,8 @@ RSpec.describe Nifty::Variants do
   end
 
   Generative.register_generator(:nonvariant) do |_|
-    generator = Generative.manager.generators.keys.select { |g|
-      !g.to_s.match(/variant/)
+    generator = Generative.manager.generators.keys.reject { |g|
+      g.to_s.match(/variant/)
     }.sample
 
     Generative.find_and_call(generator, limit: 100)
